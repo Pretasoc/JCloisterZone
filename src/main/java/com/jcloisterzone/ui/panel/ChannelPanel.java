@@ -84,9 +84,6 @@ public class ChannelPanel extends ThemedJPanel {
         scroll.setViewportBorder(null);  //ubuntu jdk
         scroll.setBorder(BorderFactory.createEmptyBorder()); //win jdk
         add(scroll, "cell 2 1, grow");
-
-        cc.register(this);
-        cc.register(chatPanel);
     }
 
     private JPanel createCreateGamePanel() {
@@ -219,6 +216,7 @@ public class ChannelPanel extends ThemedJPanel {
             add(buttons, "wrap");
 
             //TODO but what about unregister
+            // TODO component listener to unregister from game controller
             gc.register(this);
         }
 
